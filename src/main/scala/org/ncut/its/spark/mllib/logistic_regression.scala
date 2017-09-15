@@ -40,6 +40,7 @@ object logistic_regression {
 
     //对测试样本进行测试
     val predictionAndLabels = test.map {
+      //满足格式才会去处理
       case LabeledPoint(label, features) =>
         val prediction = model.predict(features)
         //预测值，实际值
